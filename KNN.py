@@ -20,7 +20,7 @@ x = list(np.array(data.drop([predict], 1)))
 y = list(variety)
 
 # define model to be used for cross validation
-model_crossval = KNeighborsClassifier(n_neighbors=7)
+model_crossval = KNeighborsClassifier(n_neighbors=11)
 # implement cross validation and print result
 scores = cross_val_score(model_crossval , x, y, cv=10)
 mean = scores.mean()
